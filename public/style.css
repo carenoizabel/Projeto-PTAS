@@ -1,0 +1,116 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+
+  .title {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .titleb {
+    text-align: center;
+    color: #333;
+    margin: -20px 0 20px 0;
+  }
+  
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  li {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  li h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  li img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  li p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .sobre-produto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .sobre-produto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .produto {
+    text-align: center;
+  }
+  
+  .produto p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  /* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+  
+  /* Estilize a barra de navegação */
+  .navbar-produto {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .navbar-produto a {
+    text-decoration: none;
+    color: white;
+  }
+ 

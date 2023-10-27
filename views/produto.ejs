@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <nav class="navbar-produto">
+    <a href="/">Página Inicial</a>
+  </nav>
+  
+  <div class="sobre-produto">
+    <h1 class="title"><%= produto.nome %></h1>
+    <img src="<%= produto.imagem %>" alt="Imagem do Produto">
+    <div class="produto">
+      <p><%= produto.descricao %></p>
+    </div>
+    <p><%= produto.preco %></p>
+  </div>
+</body>
+</html>
