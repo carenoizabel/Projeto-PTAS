@@ -8,14 +8,13 @@
   <nav class="navbar-produto">
     <a href="/">Página Inicial</a>
   </nav>
-  
   <div class="sobre-produto">
-    <h1 class="title"><%= produto.nome %></h1>
-    <img src="<%= produto.imagem %>" alt="Imagem do Produto">
+    <h1 class="titulosp"><%= produto.nome %></h1>
+    <img src="<%= produto.imagem %>" alt="Imagem do Produto" style="max-width: 300px;">
     <div class="produto">
       <p><%= produto.descricao %></p>
     </div>
-    <p><%= produto.preco %></p>
+    <p style="text-align: center;"><%= produto.preco %></p>
   </div>
 </body>
 </html>

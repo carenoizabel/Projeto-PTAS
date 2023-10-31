@@ -5,32 +5,67 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-  <h1 class="title">Art's Club</h1>
-  <br>
-  <h6 class="titleb">Artes de Qualidade</h6>
+  <h1 class="titulo">Art's Club</h1>
+  
+  <div id="carousel" class="carousel">
+    <img src="/imagem1slide.gif" alt="Imagem slide 1">
+    <img src="/imagem2slide.webp" alt="Imagem slide 2">
+    <img src="/imagem3slide.webp" alt="Imagem slide 3">
+    <img src="/imagem4slide.gif" alt="Imagem slide 4">
+</div>
+<div style="text-align: center;">
+  <h3>Espalhando Arte, Revelando Artistas, Formando Colecionadores.</h3>
+</div>
+<div class="coluna-produto">
+  <div class="quadro">
+      <a href="/produto">
+          <img src="/imgpdt1.webp" alt="Imagem do Produto 1">
+          <h2>WOMAN FLOWER</h2>
+          <p>R$ 1.989,00</p>
+          <p>Neste quadro, a artista capturou a essência da feminilidade com traços suaves e cores suaves, criando uma representação da delicadeza e da graça da mulher.</p>
+      </a>
+  </div>
+  <div class="quadro">
+      <a href="/produto">
+          <img src="/imgpdt2.webp" alt="Imagem do Produto 2">
+          <h2>CELINE</h2>
+          <p>R$ 2.099,99</p>
+          <p>As pinceladas delicadas revelam uma mulher cuja beleza e força são tão sutis quanto as pétalas de uma flor. Um tributo à beleza interior e à suavidade do feminino.</p>
+      </a>
+  </div>
+  <div class="quadro">
+      <a href="/produto">
+          <img src="/imgpdt3.webp" alt="Imagem do Produto 3">
+          <h2>BEAUTIFUL ANGEL</h2>
+          <p>R$ 1.269,00</p>
+          <p>Neste quadro, a artista retrata uma mulher em um momento de contemplação, exalando uma elegância natural e uma doçura que é verdadeiramente cativante.</p>
+      </a>
+  </div>
+  <div class="quadro">
+      <a href="/produto">
+          <img src="/imgpdt4.webp" alt="Imagem do Produto 4">
+          <h2>WOMAN WITH FLOWERS</h2>
+          <p>R$ 2.499,00</p>
+          <p>A obra de arte capta a sensação de um suspiro suave e a presença serena de uma mulher, com uma paleta de cores suaves e traços que evocam uma profunda delicadeza.</p>
+      </a>
+  </div>
+</div>
 
-  <ul>
-    <li>
-      <a href="/produto">
-        <h2>Noite Estrelada</h2>
-        <img src="/noiteestrelada.jpg" alt="Imagem do Produto 1">
-        <p>R$ 1.989,00</p>
-      </a>
-    </li>
-    <li>
-      <a href="/produto">
-        <h2>Quadro 2</h2>
-        <img src="/arte2.jpg" alt="Imagem do Produto 2">
-        <p>R$ 2.099,99</p>
-      </a>
-    </li>
-    <li>
-      <a href="/produto">
-        <h2>Quadro 3</h2>
-        <img src="/arte3.jpg" alt="Imagem do Produto 3">
-        <p>R$ 1.269,00</p>
-      </a>
-    </li>
-  </ul>
+  <script>
+    var carrossel = document.getElementById('carousel');
+    var indice = 0;
+    
+    function transicao() {
+      indice = (indice + 1) % carrossel.children.length;
+      
+      for (var i = 0; i < carrossel.children.length; i++) {
+        var img = carrossel.children[i];
+        img.style.display = (i === indice) ? 'block' : 'none';
+      }
+    }
+    
+    setInterval(transicao, 3000);
+    </script>
+    
 </body>
 </html>

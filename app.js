@@ -13,10 +13,10 @@ app.use(express.static('public'));
   
   app.get('/produto', (req, res) => {
     const produto = {
-      nome: 'Noite Estrelada',
-      imagem: '/noiteestrelada.jpg',
-      descricao: '"Noite Estrelada" é uma das obras de arte mais famosas do pintor holandês Vincent van Gogh. Ele pintou essa obra-prima em junho de 1889, enquanto estava internado no hospital psiquiátrico Saint-Paul-de-Mausole, em Saint-Rémy-de-Provence, na França. A pintura representa uma vista noturna da paisagem ao redor do hospital, vista da janela de seu quarto.',
-      preco: 'R$ 1.989,00',
+      nome: 'BEAUTIFUL ANGEL',
+      imagem: '/imgpdt3.webp',
+      descricao: 'Neste quadro, a artista retrata uma mulher em um momento de contemplação, exalando uma elegância natural e uma doçura que é verdadeiramente cativante.',
+      preco: 'R$ 1.269,00',
     };
   
     res.render('produto', { produto });
