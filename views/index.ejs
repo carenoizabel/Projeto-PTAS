@@ -17,46 +17,24 @@
   <h3>Espalhando Arte, Revelando Artistas, Formando Colecionadores.</h3>
 </div>
 
-<% for (let produto of produtos){ %>
-<h1>Izabel</h1>
-  <% } %>
 
 <div class="coluna-produto">
+  <% for (let produto of produtos) { %>
   <div class="quadro">
       <a href="/produto">
-          <img src="/imgpdt1.webp" alt="Imagem do Produto 1">
-          <h2>WOMAN FLOWER</h2>
-          <p>R$ 1.989,00</p>
-          <p>Neste quadro, a artista capturou a essência da feminilidade com traços suaves e cores suaves, criando uma representação da delicadeza e da graça da mulher.</p>
+          <img src="<%= produto.imagem %>" alt="Imagem do Produto 1">
+          <h2><%= produto.nome %></h2>
+          <p><%= produto.preco %></p>
+          <p><%= produto.descricao %></p>
       </a>
   </div>
-  <div class="quadro">
-      <a href="/produto">
-          <img src="/imgpdt2.webp" alt="Imagem do Produto 2">
-          <h2>CELINE</h2>
-          <p>R$ 2.099,99</p>
-          <p>As pinceladas delicadas revelam uma mulher cuja beleza e força são tão sutis quanto as pétalas de uma flor. Um tributo à beleza interior e à suavidade do feminino.</p>
-      </a>
-  </div>
-  <div class="quadro">
-      <a href="/produto">
-          <img src="/imgpdt3.webp" alt="Imagem do Produto 3">
-          <h2>BEAUTIFUL ANGEL</h2>
-          <p>R$ 1.269,00</p>
-          <p>Neste quadro, a artista retrata uma mulher em um momento de contemplação, exalando uma elegância natural e uma doçura que é verdadeiramente cativante.</p>
-      </a>
-  </div>
-  <div class="quadro">
-      <a href="/produto">
-          <img src="/imgpdt4.webp" alt="Imagem do Produto 4">
-          <h2>WOMAN WITH FLOWERS</h2>
-          <p>R$ 2.499,00</p>
-          <p>A obra de arte capta a sensação de um suspiro suave e a presença serena de uma mulher, com uma paleta de cores suaves e traços que evocam uma profunda delicadeza.</p>
-      </a>
-  </div>
+  <% } %>
 </div>
 
+
+
   <script>
+    //codigo para passar o carrossel
     var carrossel = document.getElementById('carousel');
     var indice = 0;
     
