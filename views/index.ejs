@@ -19,22 +19,19 @@
 
 
 <div class="coluna-produto">
-  <% produtos.forEach((produto, index) => { %>
+  <% for (let produto of produtos) { %>
   <div class="quadro">
       <a href="/produto?id=<%= produto.id %>">
-          <img src="<%= produto.imagem %>" alt="Imagem do Produto <%= index + 1%>">
+          <img src="<%= produto.imagem %>" alt="Imagem do Produto">
           <h2><%= produto.nome %></h2>
           <p><%= produto.preco %></p>
           <p><%= produto.descricao %></p>
       </a>
   </div>
-  <% if ((index + 1) % 3 === 0) { %> 
   </div>
   <div class="coluna-produto">
-    <% } else if (index === produtos.length - 1) { %>
   </div>
   <% } %>
-  <% }) %>
 </div>
 
 
