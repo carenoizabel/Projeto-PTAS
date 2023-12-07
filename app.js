@@ -43,10 +43,10 @@ const produtos = [
 },
 {
   id: 6,
-  nome: 'MÁTER AERYS',
-  imagem: '/imgpdt6.webp',
-  descricao: 'Inspirada na graça da natureza, esta obra captura o espírito da feminilidade por meio de detalhes delicados e tons suaves.',
-  preco: 'R$ 899,50'
+  nome: 'KATE TATTOO',
+  imagem: '/imgpdt10.webp',
+  descricao: 'Utilizando uma mistura de realismo e abstração, esta obra de arte explora a força e a resiliência que definem as mulheres em diversas culturas.',
+  preco: 'R$ 1.100,00'
 },
 {
   id: 7,
@@ -71,33 +71,34 @@ const produtos = [
 },
 {
   id: 10,
-  nome: 'KATE TATTOO',
-  imagem: '/imgpdt10.webp',
-  descricao: 'Utilizando uma mistura de realismo e abstração, esta obra de arte explora a força e a resiliência que definem as mulheres em diversas culturas.',
-  preco: 'R$ 1.100,00'
+  nome: 'MÁTER AERYS',
+  imagem: '/imgpdt6.webp',
+  descricao: 'Inspirada na graça da natureza, esta obra captura o espírito da feminilidade por meio de detalhes delicados e tons suaves.',
+  preco: 'R$ 899,50'
 }
 ];
 
-function buscarProdutoporId (id) {
-  const produto = produtos.find(produto => produto.id == id);
-  return produto ||  null;
-}
-
+// página inicial renderizando os produtos
   app.get('/', function (req, res) {
     res.render("index", { produtos });
   });
   
+  // rota para exibir sobre o produto quando clica
   app.get('/produto', (req, res) => {
-    const produto = {
-      nome: 'BEAUTIFUL ANGEL',
-      imagem: '/imgpdt3.webp',
-      descricao: 'Neste quadro, a artista retrata uma mulher em um momento de contemplação, exalando uma elegância natural e uma doçura que é verdadeiramente cativante.',
-      preco: 'R$ 1.269,00',
-    };
-  
-    res.render('produto', { produtos });
+    const id = req.query.id; // pega o id do produto pela url
+    const produto = buscarProdutoporId(id);
+    if (produto){
+      res.render('produto', { produto }); // se existir o produto com o id elee renderiza
+    } else{
+      res.status(404).send('Produto não encontrado'); // caso não encontrar erro 404
+    }
   });
 
+  // função buscar produto por id
+  function buscarProdutoporId (id) {
+    const produto = produtos.find(produto => produto.id == id);
+    return produto ||  null;
+  }
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
